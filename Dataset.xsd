@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Dataset" targetNamespace="http://tempuri.org/Dataset.xsd" xmlns:mstns="http://tempuri.org/Dataset.xsd" xmlns="http://tempuri.org/Dataset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SQLConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SQLConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PWB.Properties.Settings.GlobalReference.Default.SQLConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_HJS_Pick_Wave_BatchesTableAdapter" GeneratorDataComponentClassName="view_HJS_Pick_Wave_BatchesTableAdapter" Name="view_HJS_Pick_Wave_Batches" UserDataComponentName="view_HJS_Pick_Wave_BatchesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="SQLConnectionString (Settings)" DbObjectName="ITApp.dbo.view_HJS_Pick_Wave_Batches" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PWB, PL, PI, PK, [Created / Refresh Time] FROM dbo.view_HJS_Pick_Wave_Batches</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PWB" DataSetColumn="PWB" />
+              <Mapping SourceColumn="PL" DataSetColumn="PL" />
+              <Mapping SourceColumn="PI" DataSetColumn="PI" />
+              <Mapping SourceColumn="PK" DataSetColumn="PK" />
+              <Mapping SourceColumn="Created / Refresh Time" DataSetColumn="Created / Refresh Time" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Dataset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Dataset" msprop:Generator_DataSetName="Dataset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_HJS_Pick_Wave_Batches" msprop:Generator_RowEvHandlerName="view_HJS_Pick_Wave_BatchesRowChangeEventHandler" msprop:Generator_RowDeletedName="view_HJS_Pick_Wave_BatchesRowDeleted" msprop:Generator_RowDeletingName="view_HJS_Pick_Wave_BatchesRowDeleting" msprop:Generator_RowEvArgName="view_HJS_Pick_Wave_BatchesRowChangeEvent" msprop:Generator_TablePropName="view_HJS_Pick_Wave_Batches" msprop:Generator_RowChangedName="view_HJS_Pick_Wave_BatchesRowChanged" msprop:Generator_RowChangingName="view_HJS_Pick_Wave_BatchesRowChanging" msprop:Generator_TableClassName="view_HJS_Pick_Wave_BatchesDataTable" msprop:Generator_RowClassName="view_HJS_Pick_Wave_BatchesRow" msprop:Generator_TableVarName="tableview_HJS_Pick_Wave_Batches" msprop:Generator_UserTableName="view_HJS_Pick_Wave_Batches">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PWB" msprop:Generator_ColumnPropNameInRow="PWB" msprop:Generator_ColumnPropNameInTable="PWBColumn" msprop:Generator_ColumnVarNameInTable="columnPWB" msprop:Generator_UserColumnName="PWB" type="xs:int" minOccurs="0" />
+              <xs:element name="PL" msprop:Generator_ColumnPropNameInRow="PL" msprop:Generator_ColumnPropNameInTable="PLColumn" msprop:Generator_ColumnVarNameInTable="columnPL" msprop:Generator_UserColumnName="PL" type="xs:double" minOccurs="0" />
+              <xs:element name="PI" msprop:Generator_ColumnPropNameInRow="PI" msprop:Generator_ColumnPropNameInTable="PIColumn" msprop:Generator_ColumnVarNameInTable="columnPI" msprop:Generator_UserColumnName="PI" type="xs:double" minOccurs="0" />
+              <xs:element name="PK" msprop:Generator_ColumnPropNameInRow="PK" msprop:Generator_ColumnPropNameInTable="PKColumn" msprop:Generator_ColumnVarNameInTable="columnPK" msprop:Generator_UserColumnName="PK" type="xs:double" minOccurs="0" />
+              <xs:element name="Created_x0020__x002F__x0020_Refresh_x0020_Time" msdata:ReadOnly="true" msprop:Generator_ColumnPropNameInRow="_Created___Refresh_Time" msprop:Generator_ColumnPropNameInTable="_Created___Refresh_TimeColumn" msprop:Generator_ColumnVarNameInTable="_columnCreated___Refresh_Time" msprop:Generator_UserColumnName="Created / Refresh Time" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
