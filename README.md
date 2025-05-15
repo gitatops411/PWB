@@ -1,1 +1,1 @@
-Pick Wave Batchess Monitor
+Pick Wave Batches Monitor
