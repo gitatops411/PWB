@@ -68,7 +68,8 @@ namespace PWB
             dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGrid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGrid.AutoGenerateColumns = false;
             this.DataGrid.BackgroundColor = System.Drawing.Color.White;
             this.DataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -255,7 +256,6 @@ namespace PWB
             this.Controls.Add(this.NetworkErrorMsg);
             this.Controls.Add(this.DataGrid);
             this.Controls.Add(this.ClockDisplay);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -263,6 +263,7 @@ namespace PWB
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pick Wave Batch Monitor";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DataGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.HJSPickWaveBatchesBindingSource)).EndInit();

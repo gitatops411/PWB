@@ -21,6 +21,24 @@ namespace PWB
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            // Allocate column widths according to screen size
+
+            Screen primaryScreen = Screen.PrimaryScreen;
+            int colPWB, colPL, colPI, colPA, colTM, width;
+
+            width = primaryScreen.Bounds.Width;
+            DataGrid.Width  = width;
+            colPWB = (int) (DataGrid.Width * .33); // 33%
+            colPL  = (int) (DataGrid.Width * .13); // 13%
+            colPI  = (int) (DataGrid.Width * .13); // 13%
+            colPA  = (int) (DataGrid.Width * .13); // 13%
+            colTM  = (int) (DataGrid.Width * .28); // 28%
+            DataGrid.Columns[0].Width = colPWB;
+            DataGrid.Columns[1].Width = colPL;
+            DataGrid.Columns[2].Width = colPI;
+            DataGrid.Columns[3].Width = colPA;
+            DataGrid.Columns[4].Width = colTM;
+
             RefreshTimer_Tick(sender, e);
         }
 
@@ -45,7 +63,7 @@ namespace PWB
                 this.HJSPickWaveBatchesTableAdapter.Fill(this.Dataset.view_HJS_Pick_Wave_Batches);
                 NetworkErrorMsg.Visible = NetworkRetrySecs.Visible = false;
                 ClockDisplay.Text = datestr;
-                this.RefreshTimer.Interval = 20000; /* 20 seconds */
+                this.RefreshTimer.Interval = 20000; // 20 seconds
             }
 
             catch(Exception ex)
@@ -61,7 +79,7 @@ namespace PWB
                 NetworkRetrySecs.Visible = false;
                 NetworkErrorMsg.Text = "\r\n\r\n... attempting to reconnect to the network ...";
                 Refresh();
-                this.RefreshTimer.Interval = 500; /*   1/2 second   */
+                this.RefreshTimer.Interval = 500; // .5 seconds
             }
             RefreshTimer.Enabled = true;
         }        
