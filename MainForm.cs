@@ -23,11 +23,9 @@ namespace PWB
         {
             // Allocate column widths according to screen size
 
-            Screen primaryScreen = Screen.PrimaryScreen;
             int colPWB, colPL, colPI, colPA, colTM, width;
 
-            width = primaryScreen.Bounds.Width;
-            DataGrid.Width  = width;
+            DataGrid.Width  = Screen.PrimaryScreen.Bounds.Width;
             colPWB = (int) (DataGrid.Width * .33); // 33%
             colPL  = (int) (DataGrid.Width * .13); // 13%
             colPI  = (int) (DataGrid.Width * .13); // 13%
