@@ -202,6 +202,7 @@ namespace PWB
             // 
             // ClockDisplay
             // 
+            this.ClockDisplay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ClockDisplay.BackColor = System.Drawing.Color.White;
             this.ClockDisplay.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ClockDisplay.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -220,7 +221,7 @@ namespace PWB
             // NetworkErrorMsg
             // 
             this.NetworkErrorMsg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.NetworkErrorMsg.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NetworkErrorMsg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NetworkErrorMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NetworkErrorMsg.Location = new System.Drawing.Point(409, 198);
             this.NetworkErrorMsg.Multiline = true;
